@@ -24,8 +24,6 @@ export default function Signup() {
     const [confirmPassword, setConfirmPassword] = useState(true);
     const [validLen, setValidLen] = useState(true);
 
-    const [notifications, setNotifications] = useState(false);
-
     const navigate = useNavigate();
 
     const validateNameAndSet = (name) => {
@@ -101,10 +99,6 @@ export default function Signup() {
                                     {
                                         !confirmPassword ? <ErrorMessage msg="Passwords do not match!" /> : null
                                     }
-                                </div>
-                                <div className="form-group">
-                                    <input className="form-check-input mx-3" type="checkbox" onChange={(e) => { setNotifications(e.target.checked) }} />
-                                    <label className="form-check-label">Enable notifications</label>
                                 </div>
                             </form>
                             <Link to='/login' className='text-center link-info'>Already have an account? Login</Link>
