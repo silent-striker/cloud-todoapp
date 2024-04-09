@@ -6,7 +6,6 @@ import axios from 'axios';
 
 export default function Dashboard() {
     const { getUserInfo, clearSession } = useAuth();
-    const [allTodos, setAllTodos] = useState([]);
     const [incompleteTodos, setIncompleteTodos] = useState([]);
     const [completedTodos, setCompletedTodos] = useState([]);
     const [newTask, setNewTask] = useState('');

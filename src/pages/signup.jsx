@@ -28,7 +28,6 @@ export default function Signup() {
 
     const navigate = useNavigate();
 
-    // todo: implement password policy
     const validateNameAndSet = (name) => {
         const nameRegex = /^[a-zA-Z\s]+$/;
         const valid = nameRegex.test(name);
@@ -65,14 +64,6 @@ export default function Signup() {
                     console.error(err);
                     alert(err.message);
                     return;
-                }
-                console.log(data);
-
-                // todo: implement notifications with SNS
-                if (notifications) {
-                    const userSub = data.userSub;
-                    console.log('User sub: ', userSub);
-                    console.log('Notifications enabled');
                 }
                 alert('User created successfully!');
                 navigate('/login');
